@@ -1,0 +1,71 @@
+{
+    "name": "huzaifaalmesbah/bd-courier-customer-delivery-stats",
+    "description": "A universal PHP package for tracking customer delivery statistics across Pathao, Steadfast, and RedX couriers in Bangladesh. Get comprehensive delivery data including success, cancel, and total order statistics. Works with any PHP framework or CMS including Laravel, WordPress, CodeIgniter, Symfony, and more.",
+    "type": "library",
+    "license": "GPL-3.0",
+    "keywords": [
+        "customer statistics",
+        "delivery stats",
+        "order tracking",
+        "courier",
+        "delivery",
+        "customer behavior",
+        "courier analytics",
+        "pathao",
+        "steadfast courier",
+        "redx courier",
+        "shipping",
+        "order management",
+        "fraud prevention",
+        "order cancellation",
+        "delivery success rate",
+        "bangladesh",
+        "universal package",
+        "order statistics",
+        "API integration",
+        "order verification",
+        "delivery tracking",
+        "wordpress",
+        "laravel",
+        "codeigniter",
+        "symfony",
+        "framework agnostic",
+        "e-commerce",
+        "phone validation"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Ham\\BdCourier\\CustomerDeliveryStats\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Huzaifa Al Mesbah",
+            "email": "hi@huzaifa.im",
+            "role": "Developer (Universal Fork)"
+        },
+        {
+            "name": "Shahariar Ahmad",
+            "email": "muhd.shahariar.woop@gmail.com",
+            "role": "Original Author"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^7.4|^8.0|^8.1|^8.2|^8.3",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0|^10.0"
+    },
+    "suggest": {
+        "vlucas/phpdotenv": "For loading environment variables from .env files"
+    },
+    "extra": {
+        "credits": {
+            "original-package": "shahariar-ahmad/courier-fraud-checker-bd",
+            "original-author": "Shahariar Ahmad",
+            "original-repository": "https://github.com/ShahariarAhmad/ShahariarAhmad-CourierFraudCheckerBD---packagist.org"
+        }
+    }
+}
