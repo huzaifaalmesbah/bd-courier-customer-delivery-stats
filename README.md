@@ -1,26 +1,24 @@
-# Universal Courier Fraud Checker BD
+# 📦 BD Courier Customer Delivery Stats
 
-A universal PHP package for fraud detection across e-commerce platforms. Analyze customer order behavior through Pathao, Steadfast, and RedX couriers in Bangladesh. Works with **any PHP framework or CMS** including Laravel, WordPress, CodeIgniter, Symfony, and more.
+A powerful PHP package for tracking customer delivery statistics across Pathao, Steadfast, and RedX courier services in Bangladesh. Perfect for e-commerce businesses looking to analyze customer ordering patterns and delivery history.
 
-> **Note**: This is a universal, framework-agnostic fork of [shahariar-ahmad/courier-fraud-checker-bd](https://packagist.org/packages/shahariar-ahmad/courier-fraud-checker-bd) by Shahariar Ahmad, enhanced to work with any PHP framework beyond just Laravel.
+> **Note**: Framework-agnostic fork of [shahariar-ahmad/courier-fraud-checker-bd](https://packagist.org/packages/shahariar-ahmad/courier-fraud-checker-bd), enhanced to work with any PHP framework.
 
 ---
 
-## ✨ Features
+## ✨ Key Features
 
-- **Framework Agnostic**: Works with Laravel, WordPress, CodeIgniter, Symfony, and any PHP project
-- **Multi-Courier Support**: Check customer delivery history across Pathao, Steadfast, and RedX
-- **Phone Number Validation**: Validates Bangladeshi phone numbers with proper format
-- **Flexible Configuration**: Supports environment variables, configuration arrays, or framework-specific configs
-- **Comprehensive Statistics**: Get success/cancel/total delivery statistics
-- **Error Handling**: Graceful error handling with detailed error messages
-- **Easy Integration**: Simple API with extensive documentation and examples
+- **Works with Any PHP Framework**: Seamlessly integrates with Laravel, WordPress, CodeIgniter, Symfony, and more
+- **Multiple Courier Support**: Track customer delivery statistics across Pathao, Steadfast, and RedX
+- **Phone Number Validation**: Built-in validation for Bangladeshi phone numbers
+- **Flexible Configuration**: Support for environment variables or direct configuration
+- **Delivery Analytics**: Comprehensive success/cancel/total delivery statistics
+- **Error Handling**: Graceful error handling with detailed messages
+- **Simple Integration**: Easy-to-use API with comprehensive documentation
 
 ---
 
 ## ⚙️ Installation
-
-### Install via Composer:
 
 ```bash
 composer require huzaifaalmesbah/bd-courier-customer-delivery-stats
@@ -36,7 +34,7 @@ composer require huzaifaalmesbah/bd-courier-customer-delivery-stats
 
 ### Option 1: Environment Variables (Recommended)
 
-Add these environment variables to your `.env` file or system environment:
+Add these to your `.env` file:
 
 ```env
 # Pathao Credentials
@@ -52,7 +50,7 @@ REDX_USER=your_redx_phone@example.com
 REDX_PASSWORD=your_redx_password
 ```
 
-### Option 2: Configuration Array
+### Option 2: Direct Configuration
 
 ```php
 use Ham\BdCourier\CustomerDeliveryStats\CourierCustomerStats;
@@ -69,7 +67,7 @@ $customerStats = new CourierCustomerStats([
 
 ---
 
-## 🚀 Basic Usage
+## 🚀 Quick Start
 
 ```php
 <?php
@@ -80,13 +78,13 @@ use Ham\BdCourier\CustomerDeliveryStats\CourierCustomerStats;
 // Initialize (will auto-load from environment variables)
 $customerStats = new CourierCustomerStats();
 
-// Check both services
+// Check customer delivery history across all services
 $result = $customerStats->check('01712345678');
 
 print_r($result);
 ```
 
-**Output:**
+**Output Example:**
 
 ```php
 [
@@ -112,7 +110,7 @@ print_r($result);
 
 ## 📱 Phone Number Validation
 
-The package automatically validates Bangladeshi phone numbers:
+The package includes built-in validation for Bangladeshi phone numbers:
 
 ```php
 use Ham\BdCourier\CustomerDeliveryStats\Helpers\PhoneValidator;
@@ -143,7 +141,7 @@ echo $withCode; // "+8801712345678"
 
 ## 🛠️ Advanced Usage
 
-### Check Individual Services
+### Check Individual Courier Services
 
 ```php
 // Check only Pathao
@@ -179,7 +177,7 @@ try {
 }
 ```
 
-### Fraud Risk Assessment
+### Risk Assessment Example
 
 ```php
 $result = $customerStats->check('01712345678');
@@ -206,7 +204,7 @@ if ($totalOrders > 0) {
 
 ---
 
-## 🔌 Framework Integration
+## 🔌 Framework Integration Examples
 
 ### Laravel Integration
 
@@ -292,7 +290,7 @@ class Customer_stats extends CI_Controller
 
 ---
 
-## 📁 Complete Examples
+## 📁 Examples
 
 Check the `examples/` directory for complete integration examples:
 
@@ -334,31 +332,15 @@ Check the `examples/` directory for complete integration examples:
 
 This package is open-source software licensed under the [GNU General Public License v3.0 (GPL-3.0)](https://opensource.org/licenses/GPL-3.0).
 
-### License Summary:
-
-✅ **You are allowed to:**
-- Use the package for personal or commercial projects
-- Modify the source code for your own use
-- Distribute the modified or original source code (under GPL-3.0)
-- Study and learn from the source code freely
-
-❌ **You are NOT allowed to:**
-- Re-license the package under a different license
-- Distribute as part of proprietary closed-source software
-- Sub-license or sell under a restrictive license
-
-**Important**: Any distributed modifications must also be licensed under GPL-3.0.
-
 ---
 
 ## 🔗 Links & Support
 
-- **Repository**: https://github.com/huzaifaalmesbah/bd-courier-customer-delivery-stats
-- **Packagist**: https://packagist.org/packages/huzaifaalmesbah/bd-courier-customer-delivery-stats
-- **Issues**: https://github.com/huzaifaalmesbah/bd-courier-customer-delivery-stats/issues
-- **Documentation**: See `examples/` directory
-- **Email**: hi@huzaifa.im
-- **Original Package**: https://packagist.org/packages/shahariar-ahmad/courier-fraud-checker-bd
+- **GitHub**: [huzaifaalmesbah/bd-courier-customer-delivery-stats](https://github.com/huzaifaalmesbah/bd-courier-customer-delivery-stats)
+- **Packagist**: [huzaifaalmesbah/bd-courier-customer-delivery-stats](https://packagist.org/packages/huzaifaalmesbah/bd-courier-customer-delivery-stats)
+- **Issues**: [GitHub Issues](https://github.com/huzaifaalmesbah/bd-courier-customer-delivery-stats/issues)
+- **Contact**: hi@huzaifa.im
+- **Original Package**: [shahariar-ahmad/courier-fraud-checker-bd](https://packagist.org/packages/shahariar-ahmad/courier-fraud-checker-bd)
 
 ---
 
@@ -367,35 +349,33 @@ This package is open-source software licensed under the [GNU General Public Lice
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
+4. Submit a pull request
 
 ---
 
 ## 📊 Version History
 
-- **v1.0.0** - Initial universal package release
+- **v1.0.0** - Initial release
   - Framework-agnostic design
-  - Support for Laravel, WordPress, CodeIgniter
+  - Support for multiple PHP frameworks
   - Comprehensive phone validation
   - Enhanced error handling
   - Complete documentation and examples
 
 ---
 
-## 🙏 Credits & Attribution
+## 🙏 Credits
 
 This package is a universal, framework-agnostic fork of the original Laravel-specific package:
-- **Original Package**: [shahariar-ahmad/courier-fraud-checker-bd](https://packagist.org/packages/shahariar-ahmad/courier-fraud-checker-bd)
 - **Original Author**: Shahariar Ahmad
+- **Original Package**: [shahariar-ahmad/courier-fraud-checker-bd](https://packagist.org/packages/shahariar-ahmad/courier-fraud-checker-bd)
 - **Original Repository**: [ShahariarAhmad/ShahariarAhmad-CourierFraudCheckerBD---packagist.org](https://github.com/ShahariarAhmad/ShahariarAhmad-CourierFraudCheckerBD---packagist.org)
 
-### What's New in This Fork:
-- ✨ **Universal Compatibility**: Works with any PHP framework (Laravel, WordPress, CodeIgniter, Symfony, etc.)
-- 🔧 **Framework-Agnostic**: No longer depends on Laravel's HTTP client or services
-- 📱 **Enhanced Phone Validation**: Improved phone number utilities and validation
-- 🛠️ **Better Configuration**: Supports multiple configuration methods
-- 📚 **Comprehensive Examples**: Integration examples for multiple frameworks
-- 🧪 **Better Testing**: Enhanced test suite with real API testing
+### Enhancements in This Version:
+- ✨ **Universal Compatibility**: Works with any PHP framework
+- 🔧 **Framework-Agnostic**: No longer depends on Laravel
+- 📱 **Enhanced Phone Validation**: Improved phone number validation
+- 🛠️ **Flexible Configuration**: Multiple configuration methods
+- 📚 **Comprehensive Examples**: Examples for various frameworks
 
-**Special thanks to Shahariar Ahmad for the original implementation and API integration work that made this universal package possible.**
+**Special thanks to Shahariar Ahmad for the original implementation.**

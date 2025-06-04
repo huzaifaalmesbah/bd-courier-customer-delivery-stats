@@ -60,12 +60,5 @@
     },
     "suggest": {
         "vlucas/phpdotenv": "For loading environment variables from .env files"
-    },
-    "extra": {
-        "credits": {
-            "original-package": "shahariar-ahmad/courier-fraud-checker-bd",
-            "original-author": "Shahariar Ahmad",
-            "original-repository": "https://github.com/ShahariarAhmad/ShahariarAhmad-CourierFraudCheckerBD---packagist.org"
-        }
     }
 }
